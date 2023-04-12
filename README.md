@@ -1,12 +1,14 @@
 # UPDATES
 
-Added read-time functionality with services. Average read-times displayed for all articles in the index page and in the article page for each article.
+<ul>
+   <li>Added read-time functionality with services. Average read-times displayed for all articles in the index page and in the article page for each article.</li>
 
-Added unit test for read-time Service.
+   <li>Added unit test for read-time Service.</li>
 
-Added functionality for displaying last update time for all articles (with new field in the database). Last update times displayed for all articles in the index page and article page for each article. Articles in index page sorted by last update time (newest to oldest).
+   <li>Added functionality for displaying last update time for all articles (with new field in the database). Last update times displayed for all articles in the index page and article page for each article. Articles in index page sorted by last update time (newest to oldest).</li>
 
-Added edit functionality for articles (usin Symfony Forms) with new route.
+   <li>Added edit functionality for articles (using Symfony Forms) with new route.</li>
+</ul>
 
 # Internship Take Home Test 
 
