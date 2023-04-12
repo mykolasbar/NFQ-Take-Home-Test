@@ -1,0 +1,13 @@
+We’ve all seen the headlines about AI, both the good and bad. Regardless of what you think of the risks of using AI, no one can dispute that it’s here to stay. Businesses of all sizes have found great benefits from utilizing AI, and consumers across the globe use it in their daily lives.
+
+But even people who are excited about AI can ask the question: what, exactly, are the advantages and disadvantages of using it?
+
+In this article, we’ll discuss the major benefits and drawbacks of adopting AI, both in everyday life and in business. We’ll also talk through some use cases for AI, to give you an idea of how AI can help in your life. 
+
+In this article we’ll cover:
+
+What is artificial intelligence?
+Artificial Intelligence is a branch of computer science dedicated to creating computers and programs that can replicate human thinking. Some AI programs can learn from their past by analyzing complex sets of data and improve their performance without the help of humans to refine their programming. 
+
+As AI has boomed in recent years, it’s become commonplace in both business and everyday life. People use AI every day to make their lives easier – interacting with AI-powered virtual assistants or programs. Companies use AI to streamline their production processes, project gains and losses, and predict when maintenance will have to occur.
+

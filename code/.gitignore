@@ -9,7 +9,4 @@
 .phpunit.result.cache
 ###< phpunit/phpunit ###
 
-/vendor
-
-
-https://github.com/mykolasbar/NFQ-Take-Home-Test.git
+/vendor/

@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ArticleType extends AbstractType
 {
@@ -18,7 +19,7 @@ class ArticleType extends AbstractType
         $builder
             ->add('title', TextType::class)
             ->add('image', UrlType::class)
-            ->add('text', TextType::class)
+            ->add('text', TextareaType::class, array('attr' => array('style' => 'height:200px')))
             ->add('save', SubmitType::class)
         ;
     }

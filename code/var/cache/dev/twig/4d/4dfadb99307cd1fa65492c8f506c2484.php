@@ -109,10 +109,7 @@ $context["article"]]));
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 24
-        echo "                    ";
-        echo twig_escape_filter($this->env, (isset($context["testing"]) || array_key_exists("testing", $context) ? $context["testing"] : (function () { throw new RuntimeError('Variable "testing" does not exist.', 24, $this->source); })()), "html", null, true);
-        echo "
-                </div>
+        echo "                </div>
             </div>
         </div>
     </main>
@@ -162,7 +159,6 @@ $context["article"]]));
                              } %}
                         </div>
                     {% endfor  %}
-                    {{testing}}
                 </div>
             </div>
         </div>

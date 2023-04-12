@@ -58,9 +58,9 @@ class AppFixtures extends Fixture
             'text' => file_get_contents(__DIR__ . '/Articles/article_5.txt'),
         ];
         yield [
-            'name' => 'Self-Driving Cars Increase Traffic Fatalities',
-            'img' => 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2',
-            'text' => file_get_contents(__DIR__ . '/Articles/article_5.txt'),
+            'name' => 'What are the advantages and disadvantages of artificial intelligence (AI)?',
+            'img' => 'https://images.unsplash.com/photo-1516110833967-0b5716ca1387?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80',
+            'text' => file_get_contents(__DIR__ . '/Articles/article_6.txt'),
         ];
     }
 }
