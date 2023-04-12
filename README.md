@@ -1,3 +1,13 @@
+# UPDATES
+
+Added read-time functionality with services. Average read-times displayed for all articles in the index page and in the article page for each article.
+
+Added unit test for read-time Service.
+
+Added functionality for displaying last update time for all articles (with new field in the database). Last update times displayed for all articles in the index page and article page for each article. Articles in index page sorted by last update time (newest to oldest).
+
+Added edit functionality for articles (usin Symfony Forms) with new route.
+
 # Internship Take Home Test 
 
 Our NFQ team would like to congratulate you on taking on this homework task, we're delighted to see your enthusiasm for the challenge ahead!
