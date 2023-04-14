@@ -4,7 +4,9 @@
 
 return [
     'home' => [[], ['_controller' => 'App\\Controller\\IndexController::list'], [], [['text', '/']], [], [], []],
+    'addarticle' => [[], ['_controller' => 'App\\Controller\\ViewController::addArticle'], [], [['text', '/addarticle']], [], [], []],
     'article_view' => [['id'], ['_controller' => 'App\\Controller\\ViewController::view'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/article']], [], [], []],
     'editarticle_view' => [['id'], ['_controller' => 'App\\Controller\\ViewController::editArticle'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/editarticle']], [], [], []],
+    'delete_article' => [['id'], ['_controller' => 'App\\Controller\\ViewController::deleteArticle'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/delete']], [], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
 ];

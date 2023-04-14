@@ -25,11 +25,6 @@ class Article
     #[ORM\Column(length: 255)]
     private ?string $image = null;
 
-    private ?int $readTime;
-
-    #[ORM\Column]
-    private ?float $readtime;
-
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $updatedAt;
 
@@ -87,19 +82,6 @@ class Article
     public function setImage(?string $image): void
     {
         $this->image = $image;
-    }
-
-
-    public function getReadtime(): ?float
-    {
-        return $this->readtime;
-    }
-
-    public function setReadtime(float $readtime): self
-    {
-        $this->readtime = $readtime;
-
-        return $this;
     }
 
     public function getUpdatedAt(): ?\DateTimeInterface

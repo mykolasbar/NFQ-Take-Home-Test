@@ -82,7 +82,7 @@ class __TwigTemplate_cb97ce0b938a16dae0bbbbad9a4cdde2 extends Template
 
                 <div class=\"mt-4 mb-4\"><b>Article last updated at:</b> ";
         // line 16
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "updatedAt", [], "any", false, false, false, 16), "Y-m-d H:i:s", "Europe/Vilnius"), "html", null, true);
+        (((twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "updatedAt", [], "any", false, false, false, 16) != null)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "updatedAt", [], "any", false, false, false, 16), "Y-m-d H:i:s", "Europe/Vilnius"), "html", null, true))) : (print ("No updates made.")));
         echo "</div>
 
                 <div class=\"lead mb-4\">";
@@ -137,7 +137,7 @@ class __TwigTemplate_cb97ce0b938a16dae0bbbbad9a4cdde2 extends Template
                 
                 <img class=\"img-fluid\" src=\"{{ article.image }}\" alt=\"\">
 
-                <div class=\"mt-4 mb-4\"><b>Article last updated at:</b> {{ article.updatedAt|date(\"Y-m-d H:i:s\", \"Europe/Vilnius\") }}</div>
+                <div class=\"mt-4 mb-4\"><b>Article last updated at:</b> {{ article.updatedAt != null ? article.updatedAt|date(\"Y-m-d H:i:s\", \"Europe/Vilnius\") : \"No updates made.\" }}</div>
 
                 <div class=\"lead mb-4\">{{ article.text | raw }}</div>
 

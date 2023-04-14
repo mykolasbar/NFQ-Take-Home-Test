@@ -67,22 +67,24 @@ class __TwigTemplate_21fed3ab8b0f6a14baa0c7157cfa60f0 extends Template
         echo "\" class=\"btn btn-sm btn-outline-secondary\">View</a>
                 <a href=\"";
         // line 15
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("editarticle_view", ["id" => twig_get_attribute($this->env, $this->source,         // line 16
-(isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "id", [], "any", false, false, false, 16)]), "html", null, true);
-        // line 17
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("editarticle_view", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 15, $this->source); })()), "id", [], "any", false, false, false, 15)]), "html", null, true);
         echo "\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
+                <a href=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_article", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })()), "id", [], "any", false, false, false, 16)]), "html", null, true);
+        echo "\" class=\"btn btn-sm btn-outline-secondary bg-danger text-white\">Delete</a>
             </div>
 
             <small class=\"text-muted\">
                 <div>";
-        // line 21
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 21, $this->source); })()), "readingtime", [], "any", false, false, false, 21), "html", null, true);
+        // line 20
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 20, $this->source); })()), "readingtime", [], "any", false, false, false, 20), "html", null, true);
         echo " mins</div>
             </small>
         </div>
         <div class=\"text-muted mt-2\" style=\"font-size: 0.8rem\"><b>Last edit: </b>";
-        // line 24
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 24, $this->source); })()), "updatedAt", [], "any", false, false, false, 24), "Y-m-d H:i:s", "Europe/Vilnius"), "html", null, true);
+        // line 23
+        (((twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 23, $this->source); })()), "updatedAt", [], "any", false, false, false, 23) != null)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 23, $this->source); })()), "updatedAt", [], "any", false, false, false, 23), "Y-m-d H:i:s", "Europe/Vilnius"), "html", null, true))) : (print ("No edits made")));
         echo "</div>
     </div>
 </div>
@@ -104,7 +106,7 @@ class __TwigTemplate_21fed3ab8b0f6a14baa0c7157cfa60f0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  85 => 24,  79 => 21,  73 => 17,  71 => 16,  70 => 15,  66 => 14,  57 => 9,  55 => 8,  49 => 5,  44 => 3,  40 => 1,);
+        return array (  87 => 23,  81 => 20,  74 => 16,  70 => 15,  66 => 14,  57 => 9,  55 => 8,  49 => 5,  44 => 3,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -123,16 +125,15 @@ class __TwigTemplate_21fed3ab8b0f6a14baa0c7157cfa60f0 extends Template
         <div class=\"d-flex justify-content-between align-items-center\">
             <div class=\"btn-group\">
                 <a href=\"{{ path('article_view', {id: article.id}) }}\" class=\"btn btn-sm btn-outline-secondary\">View</a>
-                <a href=\"{{ path('editarticle_view', {
-                            id: article.id
-                        }) }}\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
+                <a href=\"{{ path('editarticle_view', {id: article.id}) }}\" class=\"btn btn-sm btn-outline-secondary\">Edit</a>
+                <a href=\"{{ path('delete_article', {id: article.id}) }}\" class=\"btn btn-sm btn-outline-secondary bg-danger text-white\">Delete</a>
             </div>
 
             <small class=\"text-muted\">
                 <div>{{article.readingtime}} mins</div>
             </small>
         </div>
-        <div class=\"text-muted mt-2\" style=\"font-size: 0.8rem\"><b>Last edit: </b>{{ article.updatedAt|date(\"Y-m-d H:i:s\", \"Europe/Vilnius\") }}</div>
+        <div class=\"text-muted mt-2\" style=\"font-size: 0.8rem\"><b>Last edit: </b>{{ article.updatedAt != null ? article.updatedAt|date(\"Y-m-d H:i:s\", \"Europe/Vilnius\") : \"No edits made\" }}</div>
     </div>
 </div>
 ", "_partials/article-card.html.twig", "C:\\xampp\\htdocs\\NFQ Take Home Test\\homework-main\\code\\templates\\_partials\\article-card.html.twig");

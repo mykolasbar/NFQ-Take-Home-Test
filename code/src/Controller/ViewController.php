@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Article;
+use App\Repository\ArticleRepository;
 use App\Form\Type\ArticleType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -14,6 +15,28 @@ use DateTime;
 
 class ViewController extends AbstractController
 {
+
+    #[Route('/addarticle', name: 'addarticle')]
+    public function addArticle(Request $request, EntityManagerInterface $em): Response
+    {
+        $form = $this->createForm(ArticleType::class);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            /** @var Article $article */
+            $data = $form->getData();
+            
+            $em->persist($data);
+            $em->flush();
+
+            return $this->redirectToRoute('home');
+        }
+
+        return $this->renderForm('forms/editarticle.html.twig', [
+            'form' => $form, 'header' => 'Add new article'
+        ]);
+    }
+
     #[Route('/article/{id}', name: 'article_view')]
     public function view(Article $article, Readtime $readtime): Response
     {
@@ -45,16 +68,17 @@ class ViewController extends AbstractController
         }
 
         return $this->renderForm('forms/editarticle.html.twig', [
-            'form' => $form, 'article' => $article,
+            'form' => $form, 'header' => 'Edit article', 'article' => $article,
         ]);
     }
 
-    // #[Route('/'_partials/article-card.html', name: 'article_view')]
-    public function renderPartial(Article $article, Readtime $readtime): Response
+    #[Route('/delete/{id}', methods: ['GET', 'DELETE'], name: 'delete_article')]
+    public function deleteArticle(ArticleRepository $articleRepository, $id, EntityManagerInterface $em): Response
     {
-        return $this->render('_partials/article-card.html.twig', [
-            'article' => $article, 'readtime' => $readtime->getReadTime($article->getText())
-        ]);
+        $article = $articleRepository->find($id);
+        $em->remove($article);
+        $em->flush();
+        return $this->redirectToRoute('home');
     }
 
 }

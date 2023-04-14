@@ -52,19 +52,19 @@ class __TwigTemplate_0fe4174efb165e93044494c8e431ea43 extends Template
         ";
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 9
+        // line 10
         echo "    </head>
     <body>
 
     ";
-        // line 12
-        $this->displayBlock('main', $context, $blocks);
         // line 13
+        $this->displayBlock('main', $context, $blocks);
+        // line 14
         echo "
     ";
-        // line 14
+        // line 15
         $this->displayBlock('footer_js', $context, $blocks);
-        // line 17
+        // line 18
         echo "    </body>
 </html>
 ";
@@ -95,13 +95,14 @@ class __TwigTemplate_0fe4174efb165e93044494c8e431ea43 extends Template
 
         // line 7
         echo "            <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">
+            <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0\" />
         ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
     }
 
-    // line 12
+    // line 13
     public function block_main($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -113,14 +114,14 @@ class __TwigTemplate_0fe4174efb165e93044494c8e431ea43 extends Template
 
     }
 
-    // line 14
+    // line 15
     public function block_footer_js($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer_js"));
 
-        // line 15
+        // line 16
         echo "        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN\" crossorigin=\"anonymous\"></script>
     ";
         
@@ -135,7 +136,7 @@ class __TwigTemplate_0fe4174efb165e93044494c8e431ea43 extends Template
 
     public function getDebugInfo()
     {
-        return array (  124 => 15,  117 => 14,  105 => 12,  97 => 7,  90 => 6,  77 => 5,  68 => 17,  66 => 14,  63 => 13,  61 => 12,  56 => 9,  54 => 6,  50 => 5,  44 => 1,);
+        return array (  125 => 16,  118 => 15,  106 => 13,  97 => 7,  90 => 6,  77 => 5,  68 => 18,  66 => 15,  63 => 14,  61 => 13,  56 => 10,  54 => 6,  50 => 5,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -147,6 +148,7 @@ class __TwigTemplate_0fe4174efb165e93044494c8e431ea43 extends Template
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
             <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">
+            <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0\" />
         {% endblock %}
     </head>
     <body>

@@ -12,15 +12,14 @@
         <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
                 <a href="{{ path('article_view', {id: article.id}) }}" class="btn btn-sm btn-outline-secondary">View</a>
-                <a href="{{ path('editarticle_view', {
-                            id: article.id
-                        }) }}" class="btn btn-sm btn-outline-secondary">Edit</a>
+                <a href="{{ path('editarticle_view', {id: article.id}) }}" class="btn btn-sm btn-outline-secondary">Edit</a>
+                <a href="{{ path('delete_article', {id: article.id}) }}" class="btn btn-sm btn-outline-secondary bg-danger text-white">Delete</a>
             </div>
 
             <small class="text-muted">
                 <div>{{article.readingtime}} mins</div>
             </small>
         </div>
-        <div class="text-muted mt-2" style="font-size: 0.8rem"><b>Last edit: </b>{{ article.updatedAt|date("Y-m-d H:i:s", "Europe/Vilnius") }}</div>
+        <div class="text-muted mt-2" style="font-size: 0.8rem"><b>Last edit: </b>{{ article.updatedAt != null ? article.updatedAt|date("Y-m-d H:i:s", "Europe/Vilnius") : "No edits made" }}</div>
     </div>
 </div>

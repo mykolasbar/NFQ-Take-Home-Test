@@ -64,15 +64,19 @@ class __TwigTemplate_37530d753c710c82d513b5696089aef9 extends Template
         </div>
     </section>
 
+    <div class=\"d-flex justify-content-center\"><a href=\"";
+        // line 12
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addarticle");
+        echo "\" type=\"button\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Add new article</a></div>
 
     <main>
         <div class=\"py-5 bg-light\">
             <div class=\"container\">
                 <div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3\">
                     ";
-        // line 17
+        // line 18
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_sort_filter($this->env, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 17, $this->source); })()), function ($__a__, $__b__) use ($context, $macros) { $context["a"] = $__a__; $context["b"] = $__b__; return (twig_get_attribute($this->env, $this->source, (isset($context["b"]) || array_key_exists("b", $context) ? $context["b"] : (function () { throw new RuntimeError('Variable "b" does not exist.', 17, $this->source); })()), "updatedAt", [], "any", false, false, false, 17) <=> twig_get_attribute($this->env, $this->source, (isset($context["a"]) || array_key_exists("a", $context) ? $context["a"] : (function () { throw new RuntimeError('Variable "a" does not exist.', 17, $this->source); })()), "updatedAt", [], "any", false, false, false, 17)); }));
+        $context['_seq'] = twig_ensure_traversable(twig_sort_filter($this->env, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 18, $this->source); })()), function ($__a__, $__b__) use ($context, $macros) { $context["a"] = $__a__; $context["b"] = $__b__; return (twig_get_attribute($this->env, $this->source, (isset($context["b"]) || array_key_exists("b", $context) ? $context["b"] : (function () { throw new RuntimeError('Variable "b" does not exist.', 18, $this->source); })()), "updatedAt", [], "any", false, false, false, 18) <=> twig_get_attribute($this->env, $this->source, (isset($context["a"]) || array_key_exists("a", $context) ? $context["a"] : (function () { throw new RuntimeError('Variable "a" does not exist.', 18, $this->source); })()), "updatedAt", [], "any", false, false, false, 18)); }));
         $context['loop'] = [
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -87,13 +91,13 @@ class __TwigTemplate_37530d753c710c82d513b5696089aef9 extends Template
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 18
+            // line 19
             echo "                        <div class=\"col\">
                             ";
-            // line 19
-            $this->loadTemplate("_partials/article-card.html.twig", "pages/index.html.twig", 19)->display(twig_array_merge($context, ["article" =>             // line 20
+            // line 20
+            $this->loadTemplate("_partials/article-card.html.twig", "pages/index.html.twig", 20)->display(twig_array_merge($context, ["article" =>             // line 21
 $context["article"]]));
-            // line 22
+            // line 23
             echo "                        </div>
                     ";
             ++$context['loop']['index0'];
@@ -108,7 +112,7 @@ $context["article"]]));
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 24
+        // line 25
         echo "                </div>
             </div>
         </div>
@@ -131,7 +135,7 @@ $context["article"]]));
 
     public function getDebugInfo()
     {
-        return array (  112 => 24,  97 => 22,  95 => 20,  94 => 19,  91 => 18,  74 => 17,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  116 => 25,  101 => 23,  99 => 21,  98 => 20,  95 => 19,  78 => 18,  69 => 12,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -147,6 +151,7 @@ $context["article"]]));
         </div>
     </section>
 
+    <div class=\"d-flex justify-content-center\"><a href=\"{{ path('addarticle') }}\" type=\"button\" class=\"btn btn-secondary btn-lg px-4 gap-3\">Add new article</a></div>
 
     <main>
         <div class=\"py-5 bg-light\">

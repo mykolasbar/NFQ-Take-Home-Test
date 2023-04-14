@@ -1,13 +1,15 @@
 # UPDATES
 
 <ul>
+   <li>Added new article with Data Fixtures</li>
+
    <li>Added read-time functionality with services. Average read-times displayed for all articles in the index page and in the article page for each article.</li>
 
    <li>Added unit test for read-time Service.</li>
 
    <li>Added functionality for displaying last update time for all articles (with new field in the database). Last update times displayed for all articles in the index page and article page for each article. Articles in index page sorted by last update time (newest to oldest).</li>
 
-   <li>Added edit functionality for articles (using Symfony Forms) with new route.</li>
+   <li>Added full CRUD functionality: add, edit, delete articles. Symfony forms used for adding and updating articles.</li>
 </ul>
 
 # Internship Take Home Test 
