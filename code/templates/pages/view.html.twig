@@ -9,7 +9,7 @@
                     <p class="text-muted">Average read time: {{readtime}} minutes.</p>
                 </div>
 
-                <div style = "display:flex; justify-content:flex-end; padding-bottom:10px"><a href="{{ path('editarticle_view', {id: article.id}) }}" class="btn btn-sm" style="color:blue">Edit article</a></div>
+                <div style = "display:flex; justify-content:flex-end; padding-bottom:10px"> <a href="{{ path('editarticle_view', {id: article.id}) }}" class="btn btn-sm" style="color:blue" style="color:blue">Edit article</a> <a href="{{ path('delete_article', {id: article.id}) }}" class="btn btn-sm" style="color:red">Delete article</a></div>
                 
                 <img class="img-fluid" src="{{ article.image }}" alt="">
 

@@ -70,10 +70,12 @@ class __TwigTemplate_cb97ce0b938a16dae0bbbbad9a4cdde2 extends Template
         echo " minutes.</p>
                 </div>
 
-                <div style = \"display:flex; justify-content:flex-end; padding-bottom:10px\"><a href=\"";
+                <div style = \"display:flex; justify-content:flex-end; padding-bottom:10px\"> <a href=\"";
         // line 12
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("editarticle_view", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 12, $this->source); })()), "id", [], "any", false, false, false, 12)]), "html", null, true);
-        echo "\" class=\"btn btn-sm\" style=\"color:blue\">Edit article</a></div>
+        echo "\" class=\"btn btn-sm\" style=\"color:blue\" style=\"color:blue\">Edit article</a> <a href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_article", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 12, $this->source); })()), "id", [], "any", false, false, false, 12)]), "html", null, true);
+        echo "\" class=\"btn btn-sm\" style=\"color:red\">Delete article</a></div>
                 
                 <img class=\"img-fluid\" src=\"";
         // line 14
@@ -117,7 +119,7 @@ class __TwigTemplate_cb97ce0b938a16dae0bbbbad9a4cdde2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  96 => 21,  90 => 18,  85 => 16,  80 => 14,  75 => 12,  69 => 9,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  98 => 21,  92 => 18,  87 => 16,  82 => 14,  75 => 12,  69 => 9,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -133,7 +135,7 @@ class __TwigTemplate_cb97ce0b938a16dae0bbbbad9a4cdde2 extends Template
                     <p class=\"text-muted\">Average read time: {{readtime}} minutes.</p>
                 </div>
 
-                <div style = \"display:flex; justify-content:flex-end; padding-bottom:10px\"><a href=\"{{ path('editarticle_view', {id: article.id}) }}\" class=\"btn btn-sm\" style=\"color:blue\">Edit article</a></div>
+                <div style = \"display:flex; justify-content:flex-end; padding-bottom:10px\"> <a href=\"{{ path('editarticle_view', {id: article.id}) }}\" class=\"btn btn-sm\" style=\"color:blue\" style=\"color:blue\">Edit article</a> <a href=\"{{ path('delete_article', {id: article.id}) }}\" class=\"btn btn-sm\" style=\"color:red\">Delete article</a></div>
                 
                 <img class=\"img-fluid\" src=\"{{ article.image }}\" alt=\"\">
 

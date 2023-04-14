@@ -2,11 +2,10 @@
 
 namespace App\Entity;
 
-use App\Repository\ArticleRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use App\Service\ReadTime;
-
+use App\Repository\ArticleRepository;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: ArticleRepository::class)]
 class Article
@@ -20,9 +19,16 @@ class Article
     private ?string $title = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\Length(
+        min: 3,
+        minMessage: 'Text must be at least {{ limit }} characters long',
+    )]
     private ?string $text = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Url(
+        message: 'The url {{ value }} is not a valid url',
+    )]
     private ?string $image = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
