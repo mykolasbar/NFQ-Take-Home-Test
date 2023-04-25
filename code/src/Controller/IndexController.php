@@ -20,8 +20,20 @@ class IndexController extends AbstractController
             $article->readingtime = $readtime->getReadTime($article->getText());
         }
 
+        // usort($allArticles, fn($a, $b) => 
+        //     $a->getUpdatedAt() < $b->getUpdatedAt()
+        // );
+
+        usort($allArticles, function($a, $b) {
+            if ($a->getUpdatedAt() == $b->getUpdatedAt()) {
+              return 0;
+            }
+            return $a->getUpdatedAt() > $b->getUpdatedAt() ? -1 : 1;
+        });
+
         return $this->render('pages/index.html.twig', [
             'articles' => $allArticles
         ]);
     }
 }
+  

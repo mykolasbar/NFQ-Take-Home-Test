@@ -1,3 +1,11 @@
+# UPDATES 2
+
+<ul>
+   <li>Moved delete, remove and update actions to separate controllers</li>
+   <li>Moved sorting and date conversion from DateTime object to string from view layer to controller</li>
+   <li>Updated unit test for ReadTime service to check if returned value is correct and changed return value type in the service from float to int</li>
+</ul>
+
 # UPDATES
 
 <ul>

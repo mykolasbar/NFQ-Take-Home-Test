@@ -1,0 +1,3 @@
+<?php //App%255CController%255CDeleteArticleController
+
+return [PHP_INT_MAX, []];

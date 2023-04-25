@@ -13,7 +13,7 @@
                 
                 <img class="img-fluid" src="{{ article.image }}" alt="">
 
-                <div class="mt-4 mb-4"><b>Article last updated at:</b> {{ article.updatedAt != null ? article.updatedAt|date("Y-m-d H:i:s", "Europe/Vilnius") : "No updates made." }}</div>
+                <div class="mt-4 mb-4"><b>Article last updated at:</b> {{ article.updatedAt != null ? date : "No updates made." }}</div>
 
                 <div class="lead mb-4">{{ article.text | raw }}</div>
 
@@ -24,3 +24,4 @@
         </div>
     </main>
 {% endblock %}
+

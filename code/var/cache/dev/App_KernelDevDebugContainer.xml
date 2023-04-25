@@ -5,8 +5,8 @@
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.runtime_environment">%env(default:kernel.environment:APP_RUNTIME_ENV)%</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.build_dir">C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev</parameter>
-    <parameter key="kernel.cache_dir">C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev</parameter>
+    <parameter key="kernel.build_dir">C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev</parameter>
+    <parameter key="kernel.cache_dir">C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev</parameter>
     <parameter key="kernel.logs_dir">C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
@@ -83,7 +83,7 @@
     <parameter key="kernel.error_controller">error_controller</parameter>
     <parameter key="debug.file_link_format">null</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/App_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
@@ -99,10 +99,10 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/sessions</parameter>
+    <parameter key="session.save_path">C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">false</parameter>
-    <parameter key="validator.mapping.cache.file">C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/validation.php</parameter>
+    <parameter key="validator.mapping.cache.file">C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/validation.php</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="data_collector.templates" type="collection"/>
     <parameter key="twig.form.resources" type="collection">
@@ -174,7 +174,7 @@
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
     <parameter key="doctrine.orm.enable_lazy_ghost_objects">false</parameter>
-    <parameter key="doctrine.orm.proxy_dir">C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="doctrine.migrations.preferred_em">null</parameter>
     <parameter key="doctrine.migrations.preferred_connection">null</parameter>
@@ -185,6 +185,27 @@
     <service id="kernel" class="App\Kernel" public="true" synthetic="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
+    </service>
+    <service id="App\Controller\AddArticleController" class="App\Controller\AddArticleController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\AddArticleController"/>
+      </call>
+    </service>
+    <service id="App\Controller\DeleteArticleController" class="App\Controller\DeleteArticleController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\DeleteArticleController"/>
+      </call>
+    </service>
+    <service id="App\Controller\EditArticlesController" class="App\Controller\EditArticlesController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\EditArticlesController"/>
+      </call>
     </service>
     <service id="App\Controller\IndexController" class="App\Controller\IndexController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
@@ -280,7 +301,7 @@
       </argument>
     </service>
     <service id="http_cache.store" class="Symfony\Component\HttpKernel\HttpCache\Store">
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/http_cache</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/http_cache</argument>
     </service>
     <service id="url_helper" class="Symfony\Component\HttpFoundation\UrlHelper">
       <argument type="service" id="request_stack"/>
@@ -290,7 +311,7 @@
       <tag name="container.no_preload"/>
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/App_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer" public="true">
       <tag name="container.private" package="symfony/framework-bundle" version="5.2"/>
@@ -817,7 +838,7 @@
       <tag name="kernel.reset" method="reset"/>
       <argument>FAuEQE0Mcv</argument>
       <argument>0</argument>
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/pools/app</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -832,7 +853,7 @@
       <argument>nqsBbcjVUT</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/pools/system</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -842,7 +863,7 @@
       <argument>dCjxY9M4jF</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/pools/system</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -852,7 +873,7 @@
       <argument>OSZ1uGKTra</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/pools/system</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -862,7 +883,7 @@
       <argument>-gGdTVeGZP</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/pools/system</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -872,7 +893,7 @@
       <argument>zj9CeMWJNa</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/pools/system</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -882,7 +903,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/pools/system</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -912,7 +933,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/pools/app</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -1399,7 +1420,7 @@
       <argument type="service" id=".service_locator.UxjivMC.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev</argument>
+        <argument key="cache_dir">C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -1501,13 +1522,13 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/annotations.php</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/annotations.php</argument>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!.*Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache_adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
       <tag name="container.hot_path"/>
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/annotations.php</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1611,7 +1632,7 @@
       <argument>true</argument>
     </service>
     <service id="session.storage.factory.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorageFactory">
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/sessions</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\MetadataBag">
@@ -1643,7 +1664,7 @@
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler">
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler">
-          <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/sessions</argument>
+          <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/sessions</argument>
         </service>
       </argument>
     </service>
@@ -1792,10 +1813,10 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/validation.php</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/validation.php</argument>
     </service>
     <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/validation.php</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1812,7 +1833,7 @@
       <argument>cFCnd-7kM3</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/pools/system</argument>
+      <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -1847,7 +1868,7 @@
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
         <argument key="autoescape">name</argument>
-        <argument key="cache">C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/twig</argument>
+        <argument key="cache">C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -2419,7 +2440,7 @@
         <argument type="service" id=".doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>C:/xampp/htdocs/NFQ Take Home Test/homework-main/code/var/cache/dev/doctrine/orm/Proxies</argument>
+        <argument>C:\xampp\htdocs\NFQ Take Home Test\homework-main\code\var\cache\dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -2907,6 +2928,15 @@
     <service id="maker.maker.make_stimulus_controller" class="Symfony\Bundle\MakerBundle\Maker\MakeStimulusController">
       <tag name="maker.command"/>
     </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AddArticleController" class="App\Controller\AddArticleController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AddArticleController" class="App\Controller\AddArticleController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\AddArticleController" class="App\Controller\AddArticleController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DeleteArticleController" class="App\Controller\DeleteArticleController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DeleteArticleController" class="App\Controller\DeleteArticleController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\DeleteArticleController" class="App\Controller\DeleteArticleController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\EditArticlesController" class="App\Controller\EditArticlesController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\EditArticlesController" class="App\Controller\EditArticlesController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\EditArticlesController" class="App\Controller\EditArticlesController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\IndexController" class="App\Controller\IndexController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\IndexController" class="App\Controller\IndexController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\IndexController" class="App\Controller\IndexController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -3254,30 +3284,9 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.xUrKPVU.Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
-    <service id=".service_locator.Gd3E3IZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="articleRepository" type="service_closure" id="App\Repository\ArticleRepository"/>
-        <argument key="readtime" type="service_closure" id="App\Service\ReadTime"/>
-      </argument>
-    </service>
     <service id=".service_locator.t6i3vFk" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
-      </argument>
-    </service>
-    <service id=".service_locator.j6RelyX" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="article" type="service_closure" id=".errored..service_locator.j6RelyX.App\Entity\Article"/>
-        <argument key="readtime" type="service_closure" id="App\Service\ReadTime"/>
-      </argument>
-    </service>
-    <service id=".service_locator.9TUXj4T" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="article" type="service_closure" id=".errored..service_locator.9TUXj4T.App\Entity\Article"/>
         <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
@@ -3288,22 +3297,43 @@
         <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.HhyPuvA" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.9TUXj4T" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="article" type="service_closure" id=".errored..service_locator.9TUXj4T.App\Entity\Article"/>
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.Gd3E3IZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="articleRepository" type="service_closure" id="App\Repository\ArticleRepository"/>
+        <argument key="readtime" type="service_closure" id="App\Service\ReadTime"/>
+      </argument>
+    </service>
+    <service id=".service_locator.j6RelyX" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="article" type="service_closure" id=".errored..service_locator.j6RelyX.App\Entity\Article"/>
+        <argument key="readtime" type="service_closure" id="App\Service\ReadTime"/>
+      </argument>
+    </service>
+    <service id=".service_locator.NLLyasW" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Controller\AddArticleController::addArticle" type="service_closure" id=".service_locator.t6i3vFk"/>
+        <argument key="App\Controller\DeleteArticleController::deleteArticle" type="service_closure" id=".service_locator.hRS0YY9"/>
+        <argument key="App\Controller\EditArticlesController::editArticle" type="service_closure" id=".service_locator.9TUXj4T"/>
         <argument key="App\Controller\IndexController::list" type="service_closure" id=".service_locator.Gd3E3IZ"/>
-        <argument key="App\Controller\ViewController::addArticle" type="service_closure" id=".service_locator.t6i3vFk"/>
-        <argument key="App\Controller\ViewController::deleteArticle" type="service_closure" id=".service_locator.hRS0YY9"/>
-        <argument key="App\Controller\ViewController::editArticle" type="service_closure" id=".service_locator.9TUXj4T"/>
         <argument key="App\Controller\ViewController::view" type="service_closure" id=".service_locator.j6RelyX"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
+        <argument key="App\Controller\AddArticleController:addArticle" type="service_closure" id=".service_locator.t6i3vFk"/>
+        <argument key="App\Controller\DeleteArticleController:deleteArticle" type="service_closure" id=".service_locator.hRS0YY9"/>
+        <argument key="App\Controller\EditArticlesController:editArticle" type="service_closure" id=".service_locator.9TUXj4T"/>
         <argument key="App\Controller\IndexController:list" type="service_closure" id=".service_locator.Gd3E3IZ"/>
-        <argument key="App\Controller\ViewController:addArticle" type="service_closure" id=".service_locator.t6i3vFk"/>
-        <argument key="App\Controller\ViewController:deleteArticle" type="service_closure" id=".service_locator.hRS0YY9"/>
-        <argument key="App\Controller\ViewController:editArticle" type="service_closure" id=".service_locator.9TUXj4T"/>
         <argument key="App\Controller\ViewController:view" type="service_closure" id=".service_locator.j6RelyX"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
@@ -3419,6 +3449,24 @@
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\AddArticleController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\AddArticleController"/>
+      <argument>App\Controller\AddArticleController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\DeleteArticleController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\DeleteArticleController"/>
+      <argument>App\Controller\DeleteArticleController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\EditArticlesController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\EditArticlesController"/>
+      <argument>App\Controller\EditArticlesController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
     <service id=".service_locator.mx0UMmY.App\Controller\IndexController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\IndexController"/>
       <argument>App\Controller\IndexController</argument>
@@ -3530,12 +3578,12 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.HhyPuvA"/>
+      <argument type="service" id=".service_locator.NLLyasW"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.HhyPuvA"/>
+      <argument type="service" id=".service_locator.NLLyasW"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -3544,8 +3592,8 @@
       </call>
     </service>
     <service id=".errored..service_locator.xUrKPVU.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
-    <service id=".errored..service_locator.j6RelyX.App\Entity\Article" class="App\Entity\Article"/>
     <service id=".errored..service_locator.9TUXj4T.App\Entity\Article" class="App\Entity\Article"/>
+    <service id=".errored..service_locator.j6RelyX.App\Entity\Article" class="App\Entity\Article"/>
     <service id=".console.command.about.lazy" class="Symfony\Component\Console\Command\LazyCommand">
       <argument>about</argument>
       <argument type="collection"/>
@@ -4184,7 +4232,7 @@
     <service id="doctrine.migrations.metadata_storage" alias="doctrine.migrations.storage.table_storage"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.HhyPuvA"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.NLLyasW"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -4192,7 +4240,7 @@
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
-    <service id=".service_locator.m3JkuSZ" alias=".service_locator.HhyPuvA"/>
+    <service id=".service_locator.W3Z3H0F" alias=".service_locator.NLLyasW"/>
     <service id=".service_locator.bkUSUfi" alias=".service_locator.AHPGEE6"/>
     <service id=".service_locator.3GS0utw" alias=".service_locator.8XDOiyT"/>
     <service id=".service_locator.4hi2aOY" alias=".service_locator.bBRwv06"/>
@@ -4211,11 +4259,11 @@
     <service id="argument_resolver.not_tagged_controller" alias="debug.argument_resolver.not_tagged_controller"/>
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.uo5c0SP" alias=".service_locator.xUrKPVU"/>
-    <service id=".service_locator._U5GUO8" alias=".service_locator.Gd3E3IZ"/>
     <service id=".service_locator.hCumxIO" alias=".service_locator.t6i3vFk"/>
-    <service id=".service_locator.kPKM7gn" alias=".service_locator.j6RelyX"/>
-    <service id=".service_locator.h1HDM1A" alias=".service_locator.9TUXj4T"/>
     <service id=".service_locator.wsBlAiV" alias=".service_locator.hRS0YY9"/>
+    <service id=".service_locator.h1HDM1A" alias=".service_locator.9TUXj4T"/>
+    <service id=".service_locator._U5GUO8" alias=".service_locator.Gd3E3IZ"/>
+    <service id=".service_locator.kPKM7gn" alias=".service_locator.j6RelyX"/>
     <service id=".service_locator.xwPrrlL" alias=".service_locator.mx0UMmY"/>
     <service id=".service_locator.L0rFhJm" alias=".service_locator.GVyCdgr"/>
   </services>

@@ -76,7 +76,7 @@ class __TwigTemplate_37530d753c710c82d513b5696089aef9 extends Template
                     ";
         // line 18
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_sort_filter($this->env, (isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 18, $this->source); })()), function ($__a__, $__b__) use ($context, $macros) { $context["a"] = $__a__; $context["b"] = $__b__; return (twig_get_attribute($this->env, $this->source, (isset($context["b"]) || array_key_exists("b", $context) ? $context["b"] : (function () { throw new RuntimeError('Variable "b" does not exist.', 18, $this->source); })()), "updatedAt", [], "any", false, false, false, 18) <=> twig_get_attribute($this->env, $this->source, (isset($context["a"]) || array_key_exists("a", $context) ? $context["a"] : (function () { throw new RuntimeError('Variable "a" does not exist.', 18, $this->source); })()), "updatedAt", [], "any", false, false, false, 18)); }));
+        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 18, $this->source); })()));
         $context['loop'] = [
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -157,7 +157,7 @@ $context["article"]]));
         <div class=\"py-5 bg-light\">
             <div class=\"container\">
                 <div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3\">
-                    {% for article in articles|sort((a, b) => b.updatedAt <=> a.updatedAt) %}
+                    {% for article in articles %}
                         <div class=\"col\">
                             {% include '_partials/article-card.html.twig' with {
                                 article: article
